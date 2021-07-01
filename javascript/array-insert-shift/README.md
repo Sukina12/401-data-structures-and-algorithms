@@ -4,7 +4,7 @@
 
 ## Whiteboard Process:
 
-![whiteboard](array-insert-shift.PNG)
+![whiteboard](array-binary-search.PNG)
 
 ## Approach & Efficiency :
 1. understand the problem
