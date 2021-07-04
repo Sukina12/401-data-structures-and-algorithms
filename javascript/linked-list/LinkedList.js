@@ -10,19 +10,24 @@ class LinkedList {
     if (!this.head){
       this.head = node;
     }else {
-      node.next = this.head;
-      this.head=node;
+      let currentNode = this.head;
+      while (currentNode.next){
+        currentNode = currentNode.next;
+      }
+      currentNode.next=node;
     }
   }
   include (value){
-    let pointer = this.head;
-    while (pointer.value !== value){
-      pointer = pointer.next;
-      if(pointer === null){
-        return false;
+    let currentNode = this.head;
+    let result=false;
+    while(currentNode.next){
+      currentNode = currentNode.next;
+      if(currentNode.value === value){
+        result = true;
+        return result;
       }
     }
-    return true;
+    return result;
   }
   toString (){
     let pointer = this.head;
@@ -35,6 +40,47 @@ class LinkedList {
       }
     }
     return result;
+  }
+  append (value){
+    let node = new Node(value);
+    if(!this.head){
+      this.head=node;
+    }else {
+      let desiredNode = this.head;
+      while (desiredNode.next){
+        desiredNode = desiredNode.next;
+      }
+      desiredNode.next = node;
+    }
+  }
+  insertAfter (value,newValue){
+    let node = new Node (newValue);
+    let nodeLooper = this.head;
+    while(nodeLooper){
+      if(nodeLooper.value === value){
+        let temNext = nodeLooper.next;
+        nodeLooper.next = node;
+        node.next = temNext;
+        return;
+      }
+      nodeLooper = nodeLooper.next;
+    }
+    return 'Exception';
+  }
+
+  insertBefore (value,newValue){
+    let node = new Node (newValue);
+    let nodeLooper = this.head;
+    while(nodeLooper.next){
+      if(nodeLooper.next.value === value){
+        let temNext = nodeLooper.next;
+        nodeLooper.next = node;
+        node.next = temNext;
+        return;
+      }
+      nodeLooper = nodeLooper.next;
+    }
+    return 'Exception';
   }
 
 }

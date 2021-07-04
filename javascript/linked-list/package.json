@@ -4,6 +4,7 @@
   "description": "",
   "main": "LinkedList.js",
   "scripts": {
+    "start": "",
     "test": "jest --verbose --coverage",
     "watch": "jest --verbose --coverage --watchAll"
   },

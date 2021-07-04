@@ -19,8 +19,8 @@ describe('Linked List', () => {
     const ll = new LinkedLilst();
     ll.insert('a');
     ll.insert('b');
-    expect(ll.head.value).toEqual('b');
-    expect(ll.head.next.value).toEqual('a');
+    expect(ll.head.value).toEqual('a');
+    expect(ll.head.next.value).toEqual('b');
   });
   it('insert multiple nodes', () => {
     const ll = new LinkedLilst();
@@ -36,9 +36,7 @@ describe('Linked List', () => {
     ll.insert('a');
     ll.insert('b');
     ll.insert('c');
-    expect(ll.include('a')).toBeTruthy();
-    expect(ll.include('b')).toBeTruthy();
-    expect(ll.include('c')).toBeTruthy();
+    expect(ll.include('b')).toBe(true);
   });
   it('return false if not find the vlaue', () => {
     const ll = new LinkedLilst();
@@ -47,9 +45,9 @@ describe('Linked List', () => {
   });
   it('return all values',() => {
     const ll = new LinkedLilst();
-    ll.insert('c');
-    ll.insert('b');
     ll.insert('a');
+    ll.insert('b');
+    ll.insert('c');
     expect(ll.toString()).toBeDefined();
     expect(ll.toString().length).toBeGreaterThan(0);
     expect(ll.toString()).toEqual('{a}->{b}->{c}->NULL');
