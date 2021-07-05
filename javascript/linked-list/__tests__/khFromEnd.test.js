@@ -30,7 +30,7 @@ describe('LinkedList khFromEnd', () => {
   it('linkedlist size 1', ()=>{
     let ll = new LinkedList();
     ll.insert(800);
-    expect(ll.kthFromEnd(0)).toEqual(800)
+    expect(ll.kthFromEnd(0)).toEqual(800);
   });
   it('k in the middle',() =>{
     let ll= new LinkedList();
