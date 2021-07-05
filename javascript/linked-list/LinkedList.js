@@ -4,17 +4,20 @@ const Node = require ('./Node');
 class LinkedList {
   constructor(){
     this.head = null;
+    this.length=0;
   }
   insert (value){
     const node = new Node(value);
     if (!this.head){
       this.head = node;
+      this.length++;
     }else {
       let currentNode = this.head;
       while (currentNode.next){
         currentNode = currentNode.next;
       }
       currentNode.next=node;
+      this.length++;
     }
   }
   include (value){
@@ -43,6 +46,7 @@ class LinkedList {
   }
   append (value){
     let node = new Node(value);
+    this.length++;
     if(!this.head){
       this.head=node;
     }else {
@@ -59,6 +63,7 @@ class LinkedList {
     while(nodeLooper){
       if(nodeLooper.value === value){
         let temNext = nodeLooper.next;
+        this.length++;
         nodeLooper.next = node;
         node.next = temNext;
         return;
@@ -74,11 +79,25 @@ class LinkedList {
     while(nodeLooper.next){
       if(nodeLooper.next.value === value){
         let temNext = nodeLooper.next;
+        this.length++;
         nodeLooper.next = node;
         node.next = temNext;
         return;
       }
       nodeLooper = nodeLooper.next;
+    }
+    return 'Exception';
+  }
+  kthFromEnd(k){
+    let nodeLooper = this.head;
+    let position = this.length-1-k;
+    let index=0;
+    while(nodeLooper){
+      if(position === index){
+        return nodeLooper.value;
+      }
+      nodeLooper = nodeLooper.next;
+      index++;
     }
     return 'Exception';
   }
