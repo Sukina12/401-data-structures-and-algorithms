@@ -69,6 +69,8 @@
 
 * kthFromEnd(): takes k as input and return the node value for that number.
 
+* zip lists (): take two Arguments: 2 linked lists and eturn: Linked List.
+
 
 ##### How to Use
 * To create an empty linked list : const  <name> = new LinkedList();
