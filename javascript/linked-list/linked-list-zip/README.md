@@ -1,7 +1,8 @@
 # linked-list-zip
 
 ### Challenge:
-* Write a function called zip lists take two Arguments: 2 linked lists and eturn: Linked List.
+
+- Write a function called zip lists take two Arguments: 2 linked lists and eturn: Linked List.
 
 ##### Approach
 
@@ -12,17 +13,20 @@
 5. I made the tests
 
 ##### Efficiency
+
 Space : O(n)
 Time : O(n^2)
 
 #### API
-  * zipList(): takes two linked lists as arguments and zip them togther so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
+
+- zipList(): takes two linked lists as arguments and zip them togther so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
 
 ### The Code :
 
 [code](https://github.com/Sukina12/401-data-structures-and-algorithms/blob/main/javascript/linked-list/LinkedList.js)
 
 ##### Test
+
 npm run test
 npm run watch
 
