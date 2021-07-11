@@ -29,4 +29,8 @@
 ![whiteboard](whiteboard11.PNG)
 
 ### The code :
+[The code](https://github.com/Sukina12/401-data-structures-and-algorithms/blob/main/javascript/stack-queue-pseudo/stack-queue-pseudo.js)
 
+### Tests :
+
+![The test](testChallenge11.PNG)
