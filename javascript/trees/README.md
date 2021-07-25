@@ -16,6 +16,7 @@
   * preOder() : Root -> Left -> Right
   * postOrder() : Left -> Right -> Root
   * inPrder() : Left -> Root -> Right
+  * maxValueFinder(): return max value in the tree
 
 ##### Binary Search Tree:
 
@@ -31,6 +32,12 @@
   * Binary Search Tree WhiteBoard:
   ![whiteboard2](whiteboard15-binarySearch.PNG)
 
+  * Binary Tree maxValue Function :
+  ![whiteboard16](whiteboard16.PNG)
+
+
 ### Tests :
 
-![Test](test15.PNG)
+![Test15](test15.PNG)
+
+![test16](test16.PNG)
