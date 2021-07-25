@@ -38,4 +38,32 @@ describe ('Binary Tree Working', () => {
     let expectedResult =['f','h','g','i','b','a','d','c','e'];
     expect (binaryTree.inOrder()).toEqual(expectedResult);
   });
+  it ('Find The Max Value for empty tree return message', () => {
+    binaryTree = new BinaryTree ();
+    expect (binaryTree.maxValueFinder()).toEqual('No Values in The Tree ');
+  });
+  it ('Find The Max Value ', () => {
+    const a =  new Node (2);
+    const b = new Node (7);
+    const c = new Node (5);
+    const d = new Node (2);
+    const e = new Node (6);
+    const f = new Node (9);
+    const g = new Node (5);
+    const h = new Node (11);
+    const i = new Node (4);
+    a.left = b;
+    a.right =c;
+    b.left= d;
+    b.right=e;
+    c.right = f;
+    e.left = g;
+    e.right =h;
+    f.left = i;
+
+
+    binaryTree = new BinaryTree (a);
+    expect (binaryTree.maxValueFinder()).toEqual(11);
+  });
+
 });
