@@ -52,17 +52,17 @@ class BinaryTree {
     _traverse(this.root);
     return resultArr;
   }
-  maxValueFinder(){
-    if(this.root){
+  maxValueFinder() {
+    if (this.root) {
       let maxValue = this.root.value;
       let max = (node) => {
-        if (node.value > maxValue){
+        if (node.value > maxValue) {
           maxValue = node.value;
         }
-        if(node.left){
+        if (node.left) {
           max(node.left);
         }
-        if(node.right){
+        if (node.right) {
           max(node.right);
         }
       };
@@ -71,6 +71,29 @@ class BinaryTree {
     } else {
       return `No Values in The Tree `;
     }
+  }
+  breadthFirst() {
+    if (this.root === null) {
+      return `There is an empty Tree !`;
+    }
+    let breadthFirstArr = [];
+    let myFunction = (node,callBack) => {
+      let temArr = [node];
+      while (temArr.length) {
+        let secTurn = [];
+        temArr.forEach ((item) => {
+          callBack(item);
+          if(item.left) secTurn.push(item.left);
+          if(item.right) secTurn.push(item.right);
+        });
+        temArr = secTurn;
+      }
+      return breadthFirstArr;
+    };
+    myFunction (this.root,function(node){
+      breadthFirstArr.push(node.value);
+    });
+    return breadthFirstArr;
   }
 }
 module.exports = BinaryTree;
