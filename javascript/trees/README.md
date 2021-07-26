@@ -17,6 +17,7 @@
   * postOrder() : Left -> Right -> Root
   * inPrder() : Left -> Root -> Right
   * maxValueFinder(): return max value in the tree
+  * breadthFirst(): return list of all values in the tree, in the order they were encountered
 
 ##### Binary Search Tree:
 
@@ -35,9 +36,14 @@
   * Binary Tree maxValue Function :
   ![whiteboard16](whiteboard16.PNG)
 
+  * tree-breadth-first :
+  ![whiteboard17](whiteboard17.PNG)
+
 
 ### Tests :
 
 ![Test15](test15.PNG)
 
 ![test16](test16.PNG)
+
+![test17](test17.PNG)
