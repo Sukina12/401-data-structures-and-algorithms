@@ -1,5 +1,11 @@
 'use strict';
 
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.children = [];
+  }
+}
 class BinaryTree {
   constructor(root) {
     this.root = root;
@@ -77,23 +83,23 @@ class BinaryTree {
       return `There is an empty Tree !`;
     }
     let breadthFirstArr = [];
-    let myFunction = (node,callBack) => {
+    let myFunction = (node, callBack) => {
       let temArr = [node];
       while (temArr.length) {
         let secTurn = [];
-        temArr.forEach ((item) => {
+        temArr.forEach((item) => {
           callBack(item);
-          if(item.left) secTurn.push(item.left);
-          if(item.right) secTurn.push(item.right);
+          if (item.left) secTurn.push(item.left);
+          if (item.right) secTurn.push(item.right);
         });
         temArr = secTurn;
       }
       return breadthFirstArr;
     };
-    myFunction (this.root,function(node){
+    myFunction(this.root, function (node) {
       breadthFirstArr.push(node.value);
     });
     return breadthFirstArr;
   }
 }
-module.exports = BinaryTree;
+module.exports = { BinaryTree, Node };

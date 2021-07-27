@@ -13,16 +13,13 @@
 
 ##### Kary Tree :
   * breadthFirst(): return list of all values in the tree, in the order they were encountered.
-  * fizzBuzzTree (tree) : return new tree with Buzz or Fizz or FizzBuzz.
+  * fizzBuzzTree (tree) : return new tree with Buzz or Fizz or FizzBuzz or its value.
 
 
 ### Whiteboard :
  
   * fizzBuzzTree:
   ![whiteboard18](whiteboard18.PNG)
-
-
-
 
 ### Tests :
 
