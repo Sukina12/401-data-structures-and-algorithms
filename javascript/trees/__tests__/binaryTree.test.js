@@ -1,7 +1,8 @@
 'use strict';
 
 const Node = require ('../node');
-const BinaryTree = require('../binaryTree');
+const BinaryTree = require('../binaryTree').BinaryTree;
+const NodeNew = require('../binaryTree').Node;
 
 describe ('Binary Tree Working', () => {
   let binaryTree ;
@@ -89,6 +90,4 @@ describe ('Binary Tree Working', () => {
     console.log(binaryTree);
     expect (binaryTree.breadthFirst()).toEqual(result);
   });
-
-
 });
