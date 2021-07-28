@@ -25,6 +25,8 @@
   * contains(value) : check if the tree contains this value at least one time.
   * chackMax : check the max value before adding to the tree to determine where must it be.
 
+  * summOddNumbers() : return the sum of odd numbers in the tree.
+
 ### Whiteboard :
  
   * Binary Tree WhiteBoard:
@@ -39,6 +41,9 @@
   * tree-breadth-first :
   ![whiteboard17](whiteboard17.PNG)
 
+  * sum odd numbers of binary search tree :
+  ![whiteboard19](whiteboard19.PNG)
+
 
 ### Tests :
 
@@ -47,3 +52,6 @@
 ![test16](test16.PNG)
 
 ![test17](test17.PNG)
+
+![test19](test19.PNG)
+
