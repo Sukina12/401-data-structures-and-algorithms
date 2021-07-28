@@ -32,4 +32,12 @@ describe('Binary Search Tree Working', () => {
     expect(myBinarySearchTree.contains(5)).toBe(true);
     expect(myBinarySearchTree.contains(3)).toBe(false);
   });
+  it('successfully return the sum of odd numbers', () => {
+    myBinarySearchTree.addValue(10);
+    myBinarySearchTree.addValue(5);
+    myBinarySearchTree.addValue(15);
+    myBinarySearchTree.addValue(9);
+    expect(myBinarySearchTree.sumOddNumbers()).toBe(29);
+  });
+
 });
