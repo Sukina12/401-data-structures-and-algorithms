@@ -15,7 +15,7 @@ Each type of code challenge has slightly different instructions. Please refer to
 | Week 3       | [stack-queue-pseudo](https://github.com/Sukina12/401-data-structures-and-algorithms/blob/main/javascript/stack-queue-pseudo/README.md)         | [stack-queue-animal-shelter](https://github.com/Sukina12/401-data-structures-and-algorithms/blob/main/javascript/stack-queue-animal-shelter/README.md)       |[stack-queue-brackets](https://github.com/Sukina12/401-data-structures-and-algorithms/blob/main/javascript/stack-queue-brackets/README.md)         | [Duck-Duck-Goose](https://github.com/Sukina12/401-data-structures-and-algorithms/blob/main/javascript/Duck-Duck-Goose/README.md)         | [Tree](https://github.com/Sukina12/401-data-structures-and-algorithms/blob/main/javascript/trees/README.md)         |
 | Week 4       |           |         |          |            |          |
 
-| Week 6       |[InsertionSort](https://github.com/Sukina12/401-data-structures-and-algorithms/blob/main/javascript/InsertionSort/README.md)          |         |          |            |          |
+| Week 6       |[InsertionSort](https://github.com/Sukina12/401-data-structures-and-algorithms/blob/main/javascript/InsertionSort/README.md)          |         |          |            |[HashTables](https://github.com/Sukina12/401-data-structures-and-algorithms/blob/main/javascript/hashtable/README.md)         |
 | Week 7       |           |         |          |            |          |
 | Week 8       |           |         |          |            |          |
 | Week 9       |           |         |          |            |          |
