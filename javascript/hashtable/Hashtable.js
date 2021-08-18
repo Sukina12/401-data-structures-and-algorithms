@@ -2,47 +2,51 @@
 
 const LinkedList = require('./LinkedList');
 
+
 class HashTable {
-  constructor(size){
-    this.size = size;
+  constructor(size) {
     this.storage = new Array(size);
   }
 
-  hash(key){
-    const sumCharCode = key.split('').reduce((acc,char) => {
-      return acc+char.charCodeAt(0);
-    },0);
-    const hashKey = (sumCharCode*19)%this.size;
-    return hashKey;
+  hash(key) {
+    const sum = key.split('').reduce((acc, val) => {
+      return acc + val.charCodeAt(0);
+    }, 1);
+    return (sum * 19) % this.storage.length;
   }
-  add(key,value){
-    let hashKey = this.hash(key);
 
-    if(!this.storage[hashKey]){
-      const ll = new LinkedList();
-      ll.insert({[key]:value});
-      this.storage[hashKey] = ll;
-    } else {
-      this.storage[hashKey].insert({[key]:value});
-
+  add(key, value) {
+    const bucket = this.hash(key);
+    if (!this.storage[bucket]) {
+      this.storage[bucket] = new LinkedList();
     }
+    this.storage[bucket].insert({ [key]: value });
   }
-  contains(key){
-    let hashKey=this.hash(key);
-    if(this.storage[hashKey]){
+
+  contains(key) {
+    const bucket = this.hash(key);
+    if(this.storage[bucket]){
       return true;
-    }
-    return false;
+    }else return false;
   }
-  get(key){
-    let hashKey =this.hash(key);
-    if(this.storage[hashKey]){
-      return this.storage[hashKey];
-    }else {
-      return null;
+
+  get(key) {
+    const bucket = this.hash(key);
+    if (this.contains(key)) {
+      if (this.storage[bucket].head) {
+        let current = this.storage[bucket].head;
+        if (Object.keys(current.value)[0] === key) return current.value[key];
+        while (current.next) {
+          current = current.next;
+          if (Object.keys(current.value)[0] === key) return current.value[key];
+        }
+      }
     }
+    return null;
   }
 }
+
+module.exports = HashTable;
 
 // const hashMap = new HashTable(400);
 // hashMap.add('name','sukina');
@@ -53,4 +57,4 @@ class HashTable {
 // console.table(hashMap.storage[118].head);
 
 
-module.exports = HashTable;
+// module.exports = HashTable;
